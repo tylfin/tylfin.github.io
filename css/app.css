@@ -1,0 +1,48 @@
+#first-section {
+  background-color: #263344;
+}
+
+#second-section {
+  background-color: white;
+  z-index: 10!important;
+  position: relative;
+}
+
+#third-section {
+  background-color: #5fb58f;
+}
+
+#white-row {
+  color: black;
+}
+
+.title-bar {
+  background-color: white;
+  color: black;
+  box-shadow: 1px 0px;
+  z-index: 100;
+}
+
+.row {
+    height: 500px;
+    color: white;
+}
+
+.footer {
+  background-color: #263344;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.blue-circle {
+	transition-property: transform;
+	transition-timing-function: ease-in-out;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+  z-index: 1;
+	border-radius: 50px;
+	background-color: #25446b;
+	opacity: .5;
+}
