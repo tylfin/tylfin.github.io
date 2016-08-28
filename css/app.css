@@ -47,3 +47,7 @@
 	background-color: #7bccde;
 	opacity: .5;
 }
+
+.morphext > .animated {
+    display: inline-block;
+}
