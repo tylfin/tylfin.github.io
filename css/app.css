@@ -12,7 +12,13 @@
 }
 
 #third-section {
-  background-color: #9db998;
+  background-color: #eee;
+  height: 500px;
+}
+
+#fourth-section {
+  background-color: #2a3a3f;
+  height: 500px;
 }
 
 #white-row {
@@ -23,7 +29,7 @@
   background-color: white;
   color: black;
   position: relative;
-  box-shadow: 0px 0px;
+  box-shadow: 1px 1px;
   z-index: 100;
 }
 

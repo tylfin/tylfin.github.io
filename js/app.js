@@ -24,6 +24,6 @@ $(function(){
 // scroll down button
 $("#scrollDown").click(function() {
     $('html,body').animate({
-        scrollTop: $("#second-section").offset().top},
+        scrollTop: $("#second-section").offset().top - $('.title-bar').height() - 10},
         'slow');
 });
