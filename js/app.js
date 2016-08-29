@@ -1,24 +1,37 @@
 $(document).foundation();
 
-function addCircleToFirstSection() {
+function resizeFirstRow() {
+  $('#first-section').height($(window).height());
+  var halfWay = $(window).height()/3.5;
+  $('#header').css({top: halfWay+'px' });
+}
+
+//init
+resizeFirstRow();
+
+// make the first row full screen
+window.onresize = resizeFirstRow;
+
+// add all the circles to the page
+(function addCircleToFirstSection() {
   el = document.getElementById('first-section');
-  for (var i=0; i < 10; i++){
+  for (var i=0; i < 20; i++){
     var circle = document.createElement('div');
     circle.className = 'blue-circle';
-    el.insertBefore(circle, document.getElementById('first-row'));
+    // el.insertBefore(circle, document.getElementById('first-row'));
   }
-}
-addCircleToFirstSection();
+})();
 
+// make the circles do things
 var theThings = document.querySelectorAll(".blue-circle");
 var transitionDurations = ["transitionDuration", "msTransitionDuration", "webkitTransitionDuration", "mozTransitionDuration", "oTransitionDuration"];
 var transitionDurationProperty = getSupportedPropertyName(transitionDurations);
-var transforms = ["transform", "msTransform", "webkitTransform", "mozTransform", "oTransform"];
+var transforms = ["transform", "msTransform", "webkitTransform", "mozTransform", "oTr((ansform"];
 var transformProperty = getSupportedPropertyName(transforms);
 function setInitialProperties() {
 	for (var i = 0; i < theThings.length; i++) {
 		var theThing = theThings[i];
-		var circleSize = Math.round(30 + Math.random() * 150);
+		var circleSize = Math.round(50 + Math.random() * 150);
 
 		theThing.style.width = circleSize + "px";
 		theThing.style.height = circleSize + "px";
@@ -60,7 +73,7 @@ function getRandomYPosition() {
 	return Math.round(-50 + Math.random() * el.offsetHeight);
 }
 function getRandomDuration() {
-	return (15 + Math.random() * 3) + "s";
+	return (20 + Math.random() * 3) + "s";
 }
 function getSupportedPropertyName(properties) {
     for (var i = 0; i < properties.length; i++) {
@@ -79,14 +92,28 @@ function setTransitionDuration(element) {
 	}
 }
 
-$("#js-rotating").Morphext({
-    // The [in] animation type. Refer to Animate.css for a list of available animations.
-    animation: "bounceIn",
-    // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
-    separator: ",",
-    // The delay between the changing of each phrase in milliseconds.
-    speed: 2000,
-    complete: function () {
-        // Called after the entrance animation is executed.
-    }
+// // animations
+// $("#js-rotating").Morphext({
+//     // The [in] animation type. Refer to Animate.css for a list of available animations.
+//     animation: "bounceIn",
+//     // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+//     separator: ",",
+//     // The delay between the changing of each phrase in milliseconds.
+//     speed: 3000,
+//     complete: function () {
+//         // Called after the entrance animation is executed.
+//     }
+// });
+
+$(function(){
+    $("#js-rotating").typed({
+      strings: ["software engineer.", "python developer.", "data scientist."],
+      typeSpeed: 100,
+      loop: true
+    });
 });
+
+//
+// $('#python').addClass('animated fadeInLeft');
+// $('#node').addClass('animated fadeInLeft');
+// $('#terraform').addClass('animated fadeInLeft');
