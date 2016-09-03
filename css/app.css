@@ -1,4 +1,7 @@
-
+/*
+Copyright (c) 2016, Tyler Finethy
+All rights reserved. See LICENSE file for details
+*/
 #first-section {
   background-color: #000000;
   background-image: url('../images/comp.jpg');
@@ -21,10 +24,6 @@
   height: 500px;
 }
 
-#white-row {
-  color: black;
-}
-
 .title-bar {
   background-color: white;
   color: black;
@@ -33,14 +32,17 @@
   z-index: 100;
 }
 
-.row {
+.white-color-row {
     color: white;
 }
 
-.morphext > .animated {
-    display: inline-block;
+.black-color-row {
+  color: black;
 }
 
+/*
+Classes for easy icon-sizing
+*/
 .size-12 { font-size: 12px; }
 
 .size-14 { font-size: 14px; }

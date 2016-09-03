@@ -1,29 +1,24 @@
+/*
+Copyright (c) 2016, Tyler Finethy
+All rights reserved. See LICENSE file for details
+*/
 $(document).foundation();
 
-function resizeFirstRow() {
-  $('#first-section').height($(window).height());
-  var halfWay = $(window).height()/3.5;
-  $('#header').css({top: halfWay+'px' });
-}
+window.onresize = function() {
+  // dynamically resize the windowHeight for the first row
+  var windowHeight = $(window).height();
+  $('#first-section').height(windowHeight);
+  $('#header').css({top: windowHeight*0.3+'px' });
+};
 
-//init
-resizeFirstRow();
+// init the resizer
+window.onresize();
 
-// make the first row full screen
-window.onresize = resizeFirstRow;
-
-// typing rotator
+// js typing on header
 $(function(){
     $("#js-rotating").typed({
       strings: ["software engineer.", "python developer.", "data scientist."],
       typeSpeed: 100,
       loop: true
     });
-});
-
-// scroll down button
-$("#scrollDown").click(function() {
-    $('html,body').animate({
-        scrollTop: $("#second-section").offset().top - $('.title-bar').height() - 10},
-        'slow');
 });
