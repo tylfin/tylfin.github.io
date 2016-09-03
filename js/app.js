@@ -13,6 +13,8 @@ window.onresize = function() {
 
 // init the resizer
 window.onresize();
+// init the syntax highlighting
+hljs.initHighlightingOnLoad();
 
 // js typing on header
 $(function(){

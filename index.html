@@ -7,7 +7,8 @@
   <title>Tyler Finethy | tylfin@gmail.com</title>
   <link rel="stylesheet" href="css/vendor/foundation.css" />
   <link rel="stylesheet" href="css/vendor/animate.css" />
-  <link rel="stylesheet" href="./css/vendor/foundation-icons.css" />
+  <link rel="stylesheet" href="css/vendor/foundation-icons.css" />
+  <link rel="stylesheet" href="css/vendor/highlight.min.css">
   <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
@@ -47,9 +48,43 @@
           <p><b>Other things...?</b></p>
           <p>BEEP BEEP</p>
         </div>
-        <div class="large-4 columns text-center">
+        <div style="padding-bottom:1em;" class="large-4 columns text-center">
           <i class="step fi-laptop size-72"></i>
           <p><b>Code</b></p>
+          <a target="_blank" href="https://projecteuler.net/problem=9">Project Euler Solution</a>
+          <!-- TABS  -->
+          <ul class="tabs" data-tabs id="example-tabs">
+            <li class="tabs-title is-active"><a href="#pythonPanel" aria-selected="true">Python</a></li>
+            <li class="tabs-title"><a href="#javascriptPanel">Javascript</a></li>
+          </ul>
+          <!-- END TABS -->
+
+          <!-- TABS CONTENT -->
+          <div class="tabs-content" data-tabs-content="example-tabs">
+            <div class="tabs-panel is-active" id="pythonPanel">
+<pre><code class="python hljs text-left">import math
+
+highest_b = int(math.floor(1000/3))
+for b in range(1, highest_b):
+    a = (500000 - 1000*b)/(1000 - b)
+    c = 1000 - b - a
+    if c**2 == b**2 + a**2:
+        print((a,b,c), a*b*c)
+</code></pre>
+            </div>
+            <div class="tabs-panel" id="javascriptPanel">
+<pre><code class="javascript hljs text-left">var highest_b = Math.floor(1000/3.0);
+for (var b = 1; b&lt;highest_b; b++) {
+  var a = Math.round((500000.0 - 1000.0*b)/(1000.0 - b));
+  var c = 1000.0 - a - b;
+  if (a*a + b*b === c*c) {
+    console.log([a,b,c,a*b*c]);
+  }
+}
+</code></pre>
+            </div>
+          </div>
+          <!-- END TABS CONTENT -->
         </div>
       </div>
     </div>
@@ -72,11 +107,11 @@
     </div>
   </div>
 
+<script src="js/vendor/highlight.min.js"></script>
 <script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/typed.min.js"></script>
 <script src="js/vendor/what-input.js"></script>
 <script src="js/vendor/foundation.js"></script>
-<script src="js/vendor/morphext.min.js"></script>
 <script src="js/vendor/jquery.scrollify.min.js"></script>
 <script src="js/app.js"></script>
 
