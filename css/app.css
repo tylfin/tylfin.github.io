@@ -16,12 +16,26 @@ All rights reserved. See LICENSE file for details
 
 #third-section {
   background-color: #eee;
-  height: 500px;
+  min-height: 500px;
 }
 
 #fourth-section {
   background-color: #2a3a3f;
-  height: 500px;
+  min-height: 500px;
+}
+
+#mcgill {
+  transform: translate(100vw, -50vh);
+  width:50%;
+  height: auto;
+  padding-bottom: 1em;
+}
+
+#maxwell {
+  transform: translate(-100vw, -50vh);
+  width:75%;
+  height: auto;
+  padding-bottom: 1em;
 }
 
 .title-bar {

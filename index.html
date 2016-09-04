@@ -73,8 +73,8 @@ for b in range(1, highest_b):
 </code></pre>
             </div>
             <div class="tabs-panel" id="javascriptPanel">
-<pre><code class="javascript hljs text-left">var highest_b = Math.floor(1000/3.0);
-for (var b = 1; b&lt;highest_b; b++) {
+<pre><code class="javascript hljs text-left">var highestB = Math.floor(1000/3.0);
+for (var b = 1; b&lt;highestB; b++) {
   var a = Math.round((500000.0 - 1000.0*b)/(1000.0 - b));
   var c = 1000.0 - a - b;
   if (a*a + b*b === c*c) {
@@ -93,7 +93,29 @@ for (var b = 1; b&lt;highest_b; b++) {
     <div id="third-section">
       <div class="row black-color-row">
         <div class="large-12 columns text-center">
-          <h1>Work together</h1>
+          <h1>About Me</h1>
+        </div>
+      </div>
+      <div class="row black-color-row">
+        <div class="large-6 columns text-center">
+          <img id="mcgill" src="images/McGill.png" />
+        </div>
+        <div class="large-6 columns">
+          <b>Honours Physics and Computer Science at McGill University</b>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </div>
+      </div>
+      <div class="row black-color-row">
+        <div class="large-6 columns hide-for-small-only">
+          <b>Software Engineer and Scrum Master at Maxwell Health</b>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </div>
+        <div class="large-6 columns text-center">
+          <img id="maxwell" src="images/Maxwell.png" />
+        </div>
+        <div class="large-6 columns show-for-small-only">
+          <b>Software Engineer and Scrum Master at Maxwell Health</b>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         </div>
       </div>
     </div>
@@ -107,6 +129,9 @@ for (var b = 1; b&lt;highest_b; b++) {
     </div>
   </div>
 
+<script src="js/vendor/ScrollMagic.min.js"></script>
+<script src="js/vendor/TweenMax.min.js"></script>
+<script src="js/vendor/animation.gsap.js"></script>
 <script src="js/vendor/highlight.min.js"></script>
 <script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/typed.min.js"></script>

@@ -19,8 +19,52 @@ hljs.initHighlightingOnLoad();
 // js typing on header
 $(function(){
     $("#js-rotating").typed({
-      strings: ["software engineer.", "python developer.", "data scientist."],
+      strings: ["software engineer.", "data scientist.", "full-stack developer.",
+        "devOps engineer.", "automation engineer.", "skier.", "climber.", "mentor."],
       typeSpeed: 100,
       loop: true
     });
+});
+
+window.onbeforeunload = function () {
+	window.scrollTo(0,0);
+};
+
+$(document).ready(function() {
+    var controller = new ScrollMagic.Controller(),
+        count = $('.animate').length,
+        i = 0,
+        blockTween,
+        scene;
+
+    $('.animate').css('width', $(window).width() / count);
+
+    //fly in left
+    blockTween = new TweenMax.to('#mcgill', 1.5, {
+        css: {
+          transform: 'translate(0)'
+        }
+      });
+
+    scene = new ScrollMagic.Scene({
+      offset: $('#mcgill').offset().top - 200,
+      duration: 400
+    })
+    .setTween(blockTween)
+    .addTo(controller);
+
+    //fly in left
+    blockTween = new TweenMax.to('#maxwell', 1.5, {
+        css: {
+          transform: 'translate(0)'
+        }
+      });
+
+    scene = new ScrollMagic.Scene({
+      offset: $('#maxwell').offset().top - 200,
+      duration: 400
+    })
+    .setTween(blockTween)
+    .addTo(controller);
+
 });
