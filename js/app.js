@@ -9,6 +9,9 @@ window.onresize = function() {
   var windowHeight = $(window).height();
   $('#first-section').height(windowHeight);
   $('#header').css({top: windowHeight*0.3+'px' });
+  if ($(window).width() < 460) {
+    $('#htmlwidget-7b5899e7372a4569a651').width($(window).width());
+  }
 };
 // js typing on header
 $(function(){
