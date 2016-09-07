@@ -67,4 +67,18 @@ $(document).ready(function() {
   .setTween(blockTween)
   .addTo(controller);
 
+  //fly in right
+  blockTween = new TweenMax.to('#htmlwidget-7b5899e7372a4569a651', 1.5, {
+      css: {
+        transform: 'translate(0)'
+      }
+    });
+
+  scene = new ScrollMagic.Scene({
+    offset: $('#htmlwidget-7b5899e7372a4569a651').offset().top - 450,
+    duration: 400
+  })
+  .setTween(blockTween)
+  .addTo(controller);
+
 });

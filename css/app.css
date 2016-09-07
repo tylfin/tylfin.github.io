@@ -38,10 +38,16 @@ All rights reserved. See LICENSE file for details
 }
 
 #maxwell {
-  transform: translate(100vw, -50vh);
+  transform: translate(-100vw, -50vh);
   width:55%;
   height: auto;
   padding-bottom: 1em;
+}
+
+#htmlwidget-7b5899e7372a4569a651 {
+  transform: translate(100vw, -50vh);
+  width:460px;
+  height:300px;
 }
 
 .title-bar {
