@@ -47,7 +47,7 @@ $(document).ready(function() {
     });
 
   scene = new ScrollMagic.Scene({
-    offset: $('#mcgill').offset().top - 200,
+    offset: $('#mcgill').offset().top - 450,
     duration: 400
   })
   .setTween(blockTween)
@@ -61,7 +61,7 @@ $(document).ready(function() {
     });
 
   scene = new ScrollMagic.Scene({
-    offset: $('#maxwell').offset().top - 200,
+    offset: $('#maxwell').offset().top - 450,
     duration: 400
   })
   .setTween(blockTween)

@@ -27,19 +27,19 @@ All rights reserved. See LICENSE file for details
 
 #fourth-section {
   background-color: #2a3a3f;
-  min-height: 500px;
+  padding: 1em;
 }
 
 #mcgill {
   transform: translate(-100vw, -50vh);
-  width:50%;
+  width:40%;
   height: auto;
   padding-bottom: 1em;
 }
 
 #maxwell {
   transform: translate(100vw, -50vh);
-  width:75%;
+  width:55%;
   height: auto;
   padding-bottom: 1em;
 }
