@@ -28,6 +28,7 @@ window.onbeforeunload = function () {
 };
 
 $(document).ready(function() {
+  window.scrollTo(0,0);
   // init the resizer
   window.onresize();
   // init the syntax highlighting
@@ -84,4 +85,12 @@ $(document).ready(function() {
   .setTween(blockTween)
   .addTo(controller);
 
+});
+
+
+$(document).bind('scroll', function() {
+  var $body = $(document);
+  if ($body.scrollLeft() !== 0) {
+    $body.scrollLeft(0);
+  }
 });
