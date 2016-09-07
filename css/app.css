@@ -2,10 +2,16 @@
 Copyright (c) 2016, Tyler Finethy
 All rights reserved. See LICENSE file for details
 */
+#header {
+  z-index:2;
+  position:relative;
+  text-shadow: .5px .5px black;
+}
+
 #first-section {
   background-color: #000000;
   background-image: url('../images/comp.jpg');
-  text-shadow: 1px 1px black;
+  background-size: cover;
 }
 
 #second-section {
@@ -25,14 +31,14 @@ All rights reserved. See LICENSE file for details
 }
 
 #mcgill {
-  transform: translate(100vw, -50vh);
+  transform: translate(-100vw, -50vh);
   width:50%;
   height: auto;
   padding-bottom: 1em;
 }
 
 #maxwell {
-  transform: translate(-100vw, -50vh);
+  transform: translate(100vw, -50vh);
   width:75%;
   height: auto;
   padding-bottom: 1em;

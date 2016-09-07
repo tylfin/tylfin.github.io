@@ -10,20 +10,14 @@ window.onresize = function() {
   $('#first-section').height(windowHeight);
   $('#header').css({top: windowHeight*0.3+'px' });
 };
-
-// init the resizer
-window.onresize();
-// init the syntax highlighting
-hljs.initHighlightingOnLoad();
-
 // js typing on header
 $(function(){
-    $("#js-rotating").typed({
-      strings: ["software engineer.", "data scientist.", "full-stack developer.",
-        "devOps engineer.", "automation engineer.", "skier.", "climber.", "mentor."],
-      typeSpeed: 100,
-      loop: true
-    });
+  $("#js-rotating").typed({
+    strings: ["software engineer.", "data scientist.", "skier.", " rock climber.",
+      "teacher."],
+    typeSpeed: 100,
+    loop: true
+  });
 });
 
 window.onbeforeunload = function () {
@@ -31,40 +25,46 @@ window.onbeforeunload = function () {
 };
 
 $(document).ready(function() {
-    var controller = new ScrollMagic.Controller(),
-        count = $('.animate').length,
-        i = 0,
-        blockTween,
-        scene;
+  // init the resizer
+  window.onresize();
+  // init the syntax highlighting
+  hljs.initHighlightingOnLoad();
 
-    $('.animate').css('width', $(window).width() / count);
 
-    //fly in left
-    blockTween = new TweenMax.to('#mcgill', 1.5, {
-        css: {
-          transform: 'translate(0)'
-        }
-      });
+  var controller = new ScrollMagic.Controller(),
+      count = $('.animate').length,
+      i = 0,
+      blockTween,
+      scene;
 
-    scene = new ScrollMagic.Scene({
-      offset: $('#mcgill').offset().top - 200,
-      duration: 400
-    })
-    .setTween(blockTween)
-    .addTo(controller);
+  $('.animate').css('width', $(window).width() / count);
 
-    //fly in left
-    blockTween = new TweenMax.to('#maxwell', 1.5, {
-        css: {
-          transform: 'translate(0)'
-        }
-      });
+  //fly in left
+  blockTween = new TweenMax.to('#mcgill', 1.5, {
+      css: {
+        transform: 'translate(0)'
+      }
+    });
 
-    scene = new ScrollMagic.Scene({
-      offset: $('#maxwell').offset().top - 200,
-      duration: 400
-    })
-    .setTween(blockTween)
-    .addTo(controller);
+  scene = new ScrollMagic.Scene({
+    offset: $('#mcgill').offset().top - 200,
+    duration: 400
+  })
+  .setTween(blockTween)
+  .addTo(controller);
+
+  //fly in left
+  blockTween = new TweenMax.to('#maxwell', 1.5, {
+      css: {
+        transform: 'translate(0)'
+      }
+    });
+
+  scene = new ScrollMagic.Scene({
+    offset: $('#maxwell').offset().top - 200,
+    duration: 400
+  })
+  .setTween(blockTween)
+  .addTo(controller);
 
 });
